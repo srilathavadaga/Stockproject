@@ -1,0 +1,72 @@
+
+.stock_value input{
+    background-color: white;
+    height: 2em;
+    padding: 0.8em;
+
+    border-radius: 10em;
+    color: Black;
+    font-size: 20px;
+}
+.txt{
+  border: 2px solid red;
+  width: 70%;
+}
+.stock_value button{
+     background-color: green;
+     display: inline-block;
+     font-size: 1em;
+     height: 3em;
+     padding: 0.8em;
+     text-align: center;
+     width: 10;
+     border-radius: 0.5em;
+     cursor: pointer;
+     color: white;
+
+
+
+}
+.table{
+  border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+table,th,td{
+    		border:1px solid green;
+            border-collapse:collapse;
+    		border-spacing: 10px;
+    		padding:5px;
+        height: 2.5em;
+
+    	}
+
+.currentcompany table{
+     font-size: 20px;
+    background-color: #D2F3F5;
+    margin-top: 10px;
+    height: auto;
+    padding: auto;
+    widows: 75px;
+    width: 100%;
+    border-radius: 0.5em;
+
+}
+.pastvalue
+{
+ background: rgb(88, 83, 78);
+ display: block;
+ font-size: 1.5em;
+ padding: 1em;
+ text-align: center;
+ text-decoration: none;
+ color:rgb(226, 212, 212);
+}
+.pastSearches table{
+    background-color: rgb(218, 227, 236);
+    height: auto;
+    padding: auto;
+    width: 100%;
+
+}

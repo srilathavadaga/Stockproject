@@ -1,0 +1,56 @@
+<div class ="stock_value">
+<input type ="text" name="" value = "" placeholder="Please Enter Company Name" #companyName  class="txt">
+<button type ="button" name="button" (click) = "this.getStockValue(companyName.value)">
+Search
+</button>
+</div>
+<div class="currentcompany">
+    <table  class="table" style="width: 100%">
+      <tr>
+      	<th>Company</th>
+      	<th>Monday</th>
+
+        <th>Tuesday</th>
+        	<th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        	<th>Saturday</th>
+          	<th>Sunday</th>
+      </tr>
+
+
+
+        <tr *ngIf = "this.currentCompanyStockValue !== undefined" class="trow">
+
+            <td>{{this.currentCompanyStockValue.companyName}}</td>
+            <td *ngFor = "let dataValue of (this.currentCompanyStockValue.values)">{{dataValue}}</td>
+
+        </tr>
+    </table>
+  </div> <br />
+  <div class = "pastSearches">
+    <h2 class="history">Search History</h2>
+    <br />
+    <table border="2">
+        <tr>
+            <th >Company Name</th>
+            <th>Time</th>
+              <th>Mon</th>
+
+              <th>Tue</th>
+                <th>Wed</th>
+              <th>Thur</th>
+              <th>Fri</th>
+                <th>Sat</th>
+                  <th>Sun</th>
+
+
+
+        </tr>
+        <tr *ngFor = "let pastCompany of pastCompanyYouSearch" (click) = "this.getStockValue(companyName.value)">
+            <td > {{pastCompany.companyName}}</td>
+            <td>{{pastCompany.searchTime}}</td>
+            <td *ngFor = "let values of pastCompany.values">{{values}}</td>
+        </tr>
+    </table>
+  </div>
